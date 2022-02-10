@@ -1,0 +1,50 @@
+﻿<Page x:Class="WpfOptionOneApp.Views.Pages.ManagerViewDataPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfOptionOneApp.Views.Pages"
+      Loaded="Page_Loaded"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ManagerViewDataPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                <TextBlock Text="Поиск: "/>
+                <TextBox Width="300" Margin="10,0,0,0" Name="Searchtxb" TextChanged="Searchtxb_TextChanged"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <DataGrid Name="ManagerData" AutoGenerateColumns="False" ColumnWidth="*">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Имя" Binding="{Binding FirstName}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Фамилия" Binding="{Binding LastName}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Номер телефона" Binding="{Binding Phone}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Роль" Binding="{Binding Manager.Role}"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Grid Name="NoResult" Visibility="Collapsed" Grid.Row="1">
+                <TextBlock Text="Список менеджеров пуст!" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" FontWeight="SemiBold"/>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                <Button Content="Добавить" Width="250" Name="ManagerAdd" Click="ManagerAdd_Click"></Button>
+                <Button Content="Редактировать" Name="ManagerEdit" Width="250" Margin="10,0" Click="ManagerEdit_Click"></Button>
+                <Button Content="Удалить" Width="250" Name="ManagerDelete" Click="ManagerDelete_Click">
+                    
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

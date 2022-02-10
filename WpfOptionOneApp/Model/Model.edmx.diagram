@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4fcb76a34a7f47b194955029f1a3a550" Name="Diagram1">
+        <EntityTypeShape EntityType="Option1Model.Agent" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Option1Model.AgentType" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Option1Model.DileveryHistory" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Option1Model.Manager" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Option1Model.MaterialShorts" Width="1.5" PointX="8" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Option1Model.MaterialType" Width="1.5" PointX="5.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="Option1Model.Priority" Width="1.5" PointX="0.75" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Option1Model.Product" Width="1.5" PointX="8" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Option1Model.ProductsMaterial" Width="1.5" PointX="10.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Option1Model.ProductsType" Width="1.5" PointX="5.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="Option1Model.Role" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Option1Model.sysdiagrams" Width="1.5" PointX="7.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="Option1Model.Unit" Width="1.5" PointX="5.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="Option1Model.User" Width="1.5" PointX="3" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Option1Model.Supplier" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="Option1Model.FK_Agent_AgentType" ManuallyRouted="false" />
+        <AssociationConnector Association="Option1Model.FK_Agent_Priority" ManuallyRouted="false" />
+        <AssociationConnector Association="Option1Model.FK_Agent_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="Option1Model.FK_Supplier_AgentType" ManuallyRouted="false" />
+        <AssociationConnector Association="Option1Model.FK_Supplier_DileveryHistory" ManuallyRouted="false" />
+        <AssociationConnector Association="Option1Model.FK_Manager_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="Option1Model.FK_MaterialShorts_MaterialType" ManuallyRouted="false" />
+        <AssociationConnector Association="Option1Model.FK_MaterialShorts_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="Option1Model.FK_ProductsMaterial_MaterialShorts" ManuallyRouted="false" />
+        <AssociationConnector Association="Option1Model.FK_Product_ProductsType" ManuallyRouted="false" />
+        <AssociationConnector Association="Option1Model.FK_ProductsMaterial_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="Option1Model.FK_User_Role" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
